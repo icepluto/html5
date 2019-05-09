@@ -1,0 +1,20 @@
+var c = document.getElementById("myCanvas");
+var cxt = c.getContext("2d");
+cxt.fillStyle = "#ff0000";
+cxt.beginPath();
+cxt.arc(70,18,15,0,Math.PI*2,true);
+cxt.closePath();
+cxt.fill();
+var c1 = document.getElementById("myCanvas3");
+var cxt1 = c1.getContext("2d");
+cxt1.moveTo(10,10);
+cxt1.lineTo(150,50);
+cxt1.stroke();
+var c2 = document.getElementById("myCanvas2");
+var cxt2=c2.getContext("2d");
+var grd=cxt2.createLinearGradient(0,0,175,50);
+grd.addColorStop(0,"#FF0000");
+grd.addColorStop(1,"#00FF00");
+cxt2.fillStyle=grd;
+cxt2.fillRect(0,0,175,50);
+

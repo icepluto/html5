@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+canvas{
+    display: block;
+    width: 200px;
+    height: 150px;
+    border: 1px solid salmon;
+    background-color: aqua;
+    margin: 0 auto;
+
+}
+
