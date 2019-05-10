@@ -1,0 +1,1 @@
+#localStorage没有时间限制的储存

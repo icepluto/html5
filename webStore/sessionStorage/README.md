@@ -1,0 +1,1 @@
+#sessionStorage - 针对一个 session 的数据存储

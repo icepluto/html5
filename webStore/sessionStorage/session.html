@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>session</title>
+</head>
+
+<body>
+    <p>
+        <button id="btn">
+            点击
+        </button>
+    </p>
+    <div id="result">
+
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+        if (typeof (Storage !== "undefined")) {
+        if (sessionStorage.clickCount) {
+        sessionStorage.clickCount = Number(sessionStorage.clickCount) + 1;
+        }
+
+        else {
+        sessionStorage.clickCount = 1;
+        }
+        document.getElementById("result").innerHTML = "你点击了 " + sessionStorage.clickCount + "次。";
+
+        }else{
+            document.getElementById("result").innerHTML = "您的浏览器不支持web储存"
+        }
+        })
+    </script>
+</body>
+
+</html>
