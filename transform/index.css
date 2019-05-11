@@ -12,6 +12,8 @@ div{
 }
 .first{
     transform: rotate(9deg);
+    resize: auto;
+    overflow: auto;
 }
 .second{
     transform: translate(50px,100px)
@@ -31,4 +33,50 @@ div{
 }
 .fifth{
     transform:matrix(0.866,0.5,-0.5,0.866,0,0);
+}
+
+.transition{
+    width: 200px;
+    height: 200px;
+    background-color: cadetblue;
+    transition: width 2s linear 1s,height 2s,transform 2s;
+}
+.transition:hover{
+    width: 300px;
+    height: 300px;
+    transform: rotate(180deg);
+}
+.animation{
+    width:100px;
+height:100px;
+background:aqua;
+position:relative;
+animation-name:myfirst;
+animation-duration:5s;
+animation-timing-function:linear;
+animation-delay:2s;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+animation-play-state:running;
+}
+@keyframes myfirst
+{
+0%   {background:aqua; left:0px; top:0px;}
+25%  {background:yellow; left:200px; top:0px;}
+50%  {background:blue; left:200px; top:200px;}
+75%  {background:green; left:0px; top:200px;}
+100% {background:red; left:0px; top:0px;}
+}
+.newspaper{
+    width: auto;
+    height: auto;
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 2px rgb(18, 20, 160) solid;
+
+}
+.outline{
+    border: 2px solid black;
+    outline: 2px solid aquamarine;
+    outline-offset: 1em;
 }
